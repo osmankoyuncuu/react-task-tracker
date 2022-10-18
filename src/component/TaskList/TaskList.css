@@ -1,0 +1,32 @@
+.taskList {
+  margin-top: 1.5rem;
+  width: 90%;
+}
+.taskList ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+}
+.taskList ul li {
+  list-style-type: none;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  position: relative;
+}
+.fa-check {
+  position: absolute;
+  left: 0.5rem;
+  top: 1.2rem;
+  color: green;
+}
+.fa-xmark {
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  color: red;
+  cursor: pointer;
+}

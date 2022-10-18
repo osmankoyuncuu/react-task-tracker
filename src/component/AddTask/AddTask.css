@@ -1,0 +1,24 @@
+.addTaskContainer {
+  width: 90%;
+}
+label {
+  display: block;
+  margin: 0.6rem 0 0.2rem 0;
+}
+input {
+  width: 100%;
+  height: 2.3rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+}
+.addTask {
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: rgb(95, 190, 0);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

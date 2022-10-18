@@ -1,0 +1,9 @@
+.showHideButton {
+  width: 9rem;
+  height: 2rem;
+  background-color: red;
+  border: none;
+  border-radius: 0.6rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
