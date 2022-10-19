@@ -1,29 +1,34 @@
 import "./TaskList.css";
-import { useState } from "react";
 
 const TaskList = ({ addTask, setAddTask, removeList }) => {
-  console.log(addTask);
-  const [listCheck, setListCheck] = useState(false);
-  const handleCheck = (e) => {
-    setListCheck(!listCheck);
-    if (e.target.parentElement.classList.contains("list")) {
-      if (listCheck) {
-        e.target.parentElement.className = "list check";
-        e.target.parentElement.firstElementChild.className =
-          "fa-solid fa-check";
-      } else {
-        e.target.parentElement.className = "list";
-        e.target.parentElement.firstElementChild.className =
-          "fa-solid fa-check display-none";
+  const completeList = (e, id) => {
+    addTask.map((item) => {
+      if (item.id === Number(e.target.parentElement.getAttribute("id"))) {
+        item.complete = !item.complete;
+        console.log(item);
+        if (item.complete) {
+          e.target.parentElement.className = "list complete";
+          e.target.parentElement.firstElementChild.className =
+            "fa-solid fa-check";
+        } else {
+          e.target.parentElement.className = "list";
+          e.target.parentElement.firstElementChild.className =
+            "fa-solid fa-check display-none";
+        }
       }
-    }
+    });
+    localStorage.setItem("Task", JSON.stringify(addTask));
   };
-
   return addTask.length !== 0 ? (
     <ul className="taskList">
       {addTask.map((item) => {
         return (
-          <li key={item.id} id={item.id} onClick={handleCheck} className="list">
+          <li
+            key={item.id}
+            id={item.id}
+            onClick={(e, id) => completeList(e, id)}
+            className="list"
+          >
             <i className={`fa-solid fa-check display-none`}></i>
             <h3>{item.task}</h3>
             <p>{item.day}</p>

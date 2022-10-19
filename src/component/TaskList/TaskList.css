@@ -20,6 +20,9 @@
   border-radius: 1rem;
   box-shadow: 4px 4px 10px black;
 }
+.taskList .list p {
+  font-size: 0.9rem;
+}
 .fa-check {
   position: absolute;
   left: 0.5rem;
@@ -37,7 +40,7 @@
 .display-none {
   display: none;
 }
-.check {
+.complete {
   text-decoration: line-through;
 }
 .notTask {

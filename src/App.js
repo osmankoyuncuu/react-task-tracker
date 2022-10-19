@@ -3,16 +3,21 @@ import AddTask from "./component/AddTask/AddTask";
 import Header from "./component/Header/Header";
 import ShowHideButton from "./component/ShowHideButton/ShowHideButton";
 import TaskList from "./component/TaskList/TaskList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
   const [showHide, setShowHide] = useState(true);
-  const [addTask, setAddTask] = useState([]);
-
+  const [addTask, setAddTask] = useState(
+    JSON.parse(localStorage.getItem("Task")) || []
+  );
   const removeList = (id) => {
     const remove = addTask.filter((item) => item.id !== id);
     setAddTask(remove);
   };
+  useEffect(() => {
+    localStorage.setItem("Task", JSON.stringify(addTask));
+  }, [addTask]);
+
   return (
     <div className="container">
       <Header />
