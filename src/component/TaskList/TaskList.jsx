@@ -18,6 +18,7 @@ const TaskList = ({ addTask, setAddTask, removeList }) => {
       }
     }
   };
+
   return addTask.length !== 0 ? (
     <ul className="taskList">
       {addTask.map((item) => {

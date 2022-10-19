@@ -5,12 +5,14 @@ const AddTask = ({ addTask, setAddTask }) => {
     id: "",
     task: "",
     day: "",
+    complete: false,
   });
   const { task, day } = changeTask;
   const handleChangeTask = (e) => {
     setChangeTask({
       ...changeTask,
       id: new Date().getTime(),
+      complete: false,
       [e.target.id]: e.target.value,
     });
   };
@@ -27,6 +29,7 @@ const AddTask = ({ addTask, setAddTask }) => {
         id: "",
         task: "",
         day: "",
+        complete: false,
       });
     }
   };
@@ -47,7 +50,7 @@ const AddTask = ({ addTask, setAddTask }) => {
         <label htmlFor="day">Day & Time</label>
         <input
           id="day"
-          type="text"
+          type="datetime-local"
           placeholder="Add Day & Time"
           onChange={handleChangeTask}
           value={day}
