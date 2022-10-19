@@ -2,26 +2,30 @@
   margin-top: 1.5rem;
   width: 90%;
 }
-.taskList ul {
+.taskList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0.7rem;
-  width: 100%;
+  gap: 0.5rem;
+  width: 90%;
 }
-.taskList ul li {
+.taskList .list {
   list-style-type: none;
   background-color: white;
   width: 100%;
   padding: 0.5rem 2rem;
+  font-size: 1.1rem;
   position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
 }
 .fa-check {
   position: absolute;
   left: 0.5rem;
   top: 1.2rem;
   color: green;
+  cursor: pointer;
 }
 .fa-xmark {
   position: absolute;
@@ -29,4 +33,14 @@
   top: 1.2rem;
   color: red;
   cursor: pointer;
+}
+.display-none {
+  display: none;
+}
+.check {
+  text-decoration: line-through;
+}
+.notTask {
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }

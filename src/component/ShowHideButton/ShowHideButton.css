@@ -1,11 +1,11 @@
 .showButton {
   width: 9rem;
-  height: 2rem;
   background-color: red;
   border: none;
   border-radius: 0.6rem;
   margin-top: 0.5rem;
   cursor: pointer;
+  padding: 0.5rem;
 }
 .hideButton {
   width: 9rem;
@@ -15,4 +15,5 @@
   border-radius: 0.6rem;
   margin-top: 0.5rem;
   cursor: pointer;
+  padding: 0.5rem;
 }

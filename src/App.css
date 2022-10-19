@@ -1,9 +1,11 @@
 .container {
   width: 25rem;
-  height: 35rem;
+  height: 44rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(rgb(255, 202, 103), rgb(253, 228, 180));
   border-radius: 1rem;
+  overflow: auto;
+  padding-bottom: 1rem;
 }
