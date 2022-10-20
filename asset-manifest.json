@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-task-tracker/static/css/main.f551c322.css",
+    "main.js": "/react-task-tracker/static/js/main.3cebc3af.js",
+    "index.html": "/react-task-tracker/index.html",
+    "main.f551c322.css.map": "/react-task-tracker/static/css/main.f551c322.css.map",
+    "main.3cebc3af.js.map": "/react-task-tracker/static/js/main.3cebc3af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f551c322.css",
+    "static/js/main.3cebc3af.js"
+  ]
+}
