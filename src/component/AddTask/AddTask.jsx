@@ -4,10 +4,10 @@ const AddTask = ({ addTask, setAddTask }) => {
   const [changeTask, setChangeTask] = useState({
     id: "",
     task: "",
-    day: "",
+    date: "",
     complete: false,
   });
-  const { task, day } = changeTask;
+  const { task, date } = changeTask;
   const handleChangeTask = (e) => {
     setChangeTask({
       ...changeTask,
@@ -17,18 +17,18 @@ const AddTask = ({ addTask, setAddTask }) => {
     });
   };
   const handleSave = () => {
-    if (task === "" && day === "") {
+    if (task === "" && date === "") {
       alert("Please enter a task and day&time.");
     } else if (task === "") {
       alert("Please enter a task.");
-    } else if (day === "") {
+    } else if (date === "") {
       alert("Please enter a day&time.");
     } else {
       setAddTask([...addTask, changeTask]);
       setChangeTask({
         id: "",
         task: "",
-        day: "",
+        date: "",
         complete: false,
       });
     }
@@ -47,13 +47,13 @@ const AddTask = ({ addTask, setAddTask }) => {
         />
       </div>
       <div>
-        <label htmlFor="day">Day & Time</label>
+        <label htmlFor="date">Day & Time</label>
         <input
-          id="day"
+          id="date"
           type="datetime-local"
           placeholder="Add Day & Time"
           onChange={handleChangeTask}
-          value={day}
+          value={date}
         />
       </div>
       <button className="addTask" onClick={handleSave}>

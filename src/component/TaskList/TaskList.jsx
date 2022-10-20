@@ -1,8 +1,8 @@
 import "./TaskList.css";
 
-const TaskList = ({ addTask, setAddTask, removeList }) => {
+const TaskList = ({ addTask, setAddTask }) => {
   const completeList = (e, id) => {
-    addTask.map((item) => {
+    function mapFunc(item) {
       if (item.id === Number(e.target.parentElement.getAttribute("id"))) {
         item.complete = !item.complete;
         console.log(item);
@@ -16,9 +16,16 @@ const TaskList = ({ addTask, setAddTask, removeList }) => {
             "fa-solid fa-check display-none";
         }
       }
-    });
+    }
+    addTask.map(mapFunc);
     localStorage.setItem("Task", JSON.stringify(addTask));
   };
+
+  const removeList = (id) => {
+    const remove = addTask.filter((item) => item.id !== id);
+    setAddTask(remove);
+  };
+
   return addTask.length !== 0 ? (
     <ul className="taskList">
       {addTask.map((item) => {
@@ -27,11 +34,15 @@ const TaskList = ({ addTask, setAddTask, removeList }) => {
             key={item.id}
             id={item.id}
             onClick={(e, id) => completeList(e, id)}
-            className="list"
+            className={`list ${item.complete ? "complete" : ""}`}
           >
-            <i className={`fa-solid fa-check display-none`}></i>
+            <i
+              className={`fa-solid fa-check ${
+                item.complete ? "" : "display-none"
+              }`}
+            ></i>
             <h3>{item.task}</h3>
-            <p>{item.day}</p>
+            <p>{new Date(item.date).toString().replace(/GMT.*/g, "")}</p>
             <i
               className="fa-solid fa-xmark"
               onClick={() => removeList(item.id)}

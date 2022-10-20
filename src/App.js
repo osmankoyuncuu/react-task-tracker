@@ -10,10 +10,7 @@ const App = () => {
   const [addTask, setAddTask] = useState(
     JSON.parse(localStorage.getItem("Task")) || []
   );
-  const removeList = (id) => {
-    const remove = addTask.filter((item) => item.id !== id);
-    setAddTask(remove);
-  };
+
   useEffect(() => {
     localStorage.setItem("Task", JSON.stringify(addTask));
   }, [addTask]);
@@ -23,11 +20,7 @@ const App = () => {
       <Header />
       <ShowHideButton showHide={showHide} setShowHide={setShowHide} />
       {showHide && <AddTask addTask={addTask} setAddTask={setAddTask} />}
-      <TaskList
-        addTask={addTask}
-        setAddTask={setAddTask}
-        removeList={removeList}
-      />
+      <TaskList addTask={addTask} setAddTask={setAddTask} />
     </div>
   );
 };
