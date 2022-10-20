@@ -1,11 +1,10 @@
 import "./TaskList.css";
 
-const TaskList = ({ addTask, setAddTask }) => {
-  const completeList = (e, id) => {
+const TaskList = ({ addTask, setAddTask, filter }) => {
+  const completeList = (e) => {
     function mapFunc(item) {
       if (item.id === Number(e.target.parentElement.getAttribute("id"))) {
         item.complete = !item.complete;
-        console.log(item);
         if (item.complete) {
           e.target.parentElement.className = "list complete";
           e.target.parentElement.firstElementChild.className =
@@ -28,7 +27,7 @@ const TaskList = ({ addTask, setAddTask }) => {
 
   return addTask.length !== 0 ? (
     <ul className="taskList">
-      {addTask.map((item) => {
+      {filter.map((item) => {
         return (
           <li
             key={item.id}

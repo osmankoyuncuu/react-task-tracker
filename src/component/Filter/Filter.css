@@ -1,0 +1,22 @@
+.filter-container {
+  width: 90%;
+}
+.filter-container h4 {
+  margin-top: 0.5rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.btn-container button {
+  width: 6rem;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  border: none;
+  cursor: pointer;
+}
+.btn-container button:active {
+  transform: scale(95%);
+}

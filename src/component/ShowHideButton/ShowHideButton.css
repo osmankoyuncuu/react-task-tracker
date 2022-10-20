@@ -1,19 +1,17 @@
-.showButton {
+button {
   width: 9rem;
-  background-color: red;
   border: none;
   border-radius: 0.6rem;
   margin-top: 0.5rem;
   cursor: pointer;
   padding: 0.5rem;
 }
+button:hover {
+  transform: scale(102%);
+}
+.showButton {
+  background-color: red;
+}
 .hideButton {
-  width: 9rem;
-  height: 2rem;
   background-color: green;
-  border: none;
-  border-radius: 0.6rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
 }

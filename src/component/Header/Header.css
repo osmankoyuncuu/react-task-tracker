@@ -1,3 +1,5 @@
-h1 {
+.taskPng {
   margin-top: 1rem;
+  width: 100px;
+  min-height: 100px;
 }

@@ -19,6 +19,7 @@
   cursor: pointer;
   border-radius: 1rem;
   box-shadow: 4px 4px 10px black;
+  background-color: rgb(195, 195, 255);
 }
 .taskList .list p {
   font-size: 0.9rem;

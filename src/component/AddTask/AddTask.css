@@ -11,6 +11,8 @@ input {
   border-radius: 0.5rem;
   font-size: 1.1rem;
   padding: 0 1rem;
+  background-color: rgb(195, 195, 255);
+  outline: none;
 }
 .addTask {
   width: 100%;
@@ -21,4 +23,7 @@ input {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+.addTask:active {
+  transform: scale(98%);
 }
